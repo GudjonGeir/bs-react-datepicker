@@ -1,0 +1,37 @@
+{
+  "name": "bs-react-datepicker",
+  "version": "0.1.0",
+  "description": "React Grid Layout for BuckleScript/Reason",
+  "main": "lib/js/src/ReactDatepicker.js",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world"
+  },
+  "keywords": [
+    "BuckleScript",
+    "react",
+    "react-grid-layout"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohadrau/bs-react-grid"
+  },
+  "bugs": {
+    "url": "https://github.com/ohadrau/bs-react-grid/issues"
+  },
+  "homepage": "https://github.com/ohadrau/bs-react-grid#readme",
+  "author": "Zach Baylin <me@zachbayl.in>",
+  "license": "MIT",
+  "dependencies": {
+    "bs-moment": "^0.3.0",
+    "moment": "^2.22.2",
+    "react": "^16.4.0",
+    "react-grid-layout": "^0.16.6"
+  },
+  "devDependencies": {
+    "bs-platform": "^3.0.0",
+    "react-datepicker": "^1.5.0",
+    "reason-react": "^0.3.4"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "bs-react-datepicker-test",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "webpack:production": "NODE_ENV=production webpack"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-datepicker": "^1.5.0",
+    "react-dom": "^16.4.1",
+    "reason-react": "^0.3.1"
+  },
+  "devDependencies": {
+    "bs-platform": "^3.1.5",
+    "reason-react": "^0.3.1",
+    "react-datepicker": "^1.5.0",
+    "bs-react-datepicker": "file:..",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^2.0.10"
+  }
+}
