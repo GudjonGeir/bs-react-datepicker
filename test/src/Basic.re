@@ -21,7 +21,8 @@ let make(children) {
   },
   render: (self) => {
     <DatePicker
-    dropdownMode = `Scroll
+    dropdownMode = Select
+    dateFormat = "YYYY-MM-DD"
     selected = self.state.currentDate
     onChange=((date) => self.send(UpdateDate(date)))>
     </DatePicker>

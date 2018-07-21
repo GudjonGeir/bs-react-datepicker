@@ -5,18 +5,14 @@ module DatePicker = {
   [@bs.module "react-datepicker"]
   external reactClass : ReasonReact.reactClass = "default";
 
-  
-  [@bs.deriving jsConverter]
-  type dropdownMode = [
-    | [@bs.as "scroll"] `Scroll
-    | [@bs.as "select"] `Select
-  ];
+  type dropdownMode =
+    | Scroll
+    | Select;
 
-  type dateFormat = [
-    | `Str(string)
-    | `Int(int)
-  ];
-
+  let dropdownModeToString = (dropdownMode) => switch dropdownMode {
+    | Select => "select"
+    | Scroll => "scroll"
+  };
 
   let make =
     (~adjustDateOnChange: option(bool) = ?,
@@ -29,7 +25,7 @@ module DatePicker = {
      ~className: option(string) = ?,
      ~customInput: option(Dom.htmlElement) = ?,
      ~customInputRef: option(string) = ?,
-     ~dateFormat: option(dateFormat) = ?,
+     ~dateFormat: option(string) = ?,
      ~dateFormatString: option(string) = ?,
      ~dayClassName: option(unit) = ?,
      ~disabled: option(bool) = ?,
@@ -117,7 +113,7 @@ module DatePicker = {
           "dayClassName": fromOption(dayClassName),
           "disabled": fromOption(disabled),
           "disabledKeyboardNavigation": fromOption(disabledKeyboardNavigation),
-          "dropdownMode": dropdownMode,
+          "dropdownMode": dropdownModeToString(dropdownMode),
           "endDate": fromOption(endDate),
           "excludeDates": fromOption(excludeDates),
           "filterDate": fromOption(filterDate),
